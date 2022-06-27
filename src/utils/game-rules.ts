@@ -1,3 +1,4 @@
+import { GameEntities } from "../constants/game-entities";
 import { Entities } from "../interfaces";
 
 const TIE = "TIE";
@@ -15,4 +16,9 @@ export function computeResult(status: [string, string]) {
   if (GAME_RULES[entityA + entityB]) return GAME_RULES[entityA + entityB];
   else if (GAME_RULES[entityB + entityA]) return GAME_RULES[entityB + entityA];
   else return TIE;
+}
+
+export function getRandomEntity() {
+  const index = Math.abs(Math.floor(Math.random() * GameEntities.length));
+  return GameEntities[index];
 }

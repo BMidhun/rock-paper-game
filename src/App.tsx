@@ -13,7 +13,8 @@ function App() {
 
   if (!gameMode) {
     return <Menu selectGameMode={selectGameMode} />;
-  } else return <GameBoard />;
+  } else
+    return <GameBoard gameMode={gameMode} goToMenu={() => setGameMode(null)} />;
 }
 
 export default App;
