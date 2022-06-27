@@ -8,3 +8,6 @@ export enum Entities {
   PAPER = "PAPER",
   SCISSORS = "SCISSORS",
 }
+
+export type PLVSCOM = "PLVSCOM";
+export type COMVSCOM = "COMVSCOM";

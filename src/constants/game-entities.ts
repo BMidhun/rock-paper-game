@@ -1,5 +1,5 @@
 import { Entities } from "../interfaces";
-import { GameEntity } from "./gameEntity.class";
+import { GameEntity } from "../utils/gameEntity.class";
 
 const rock = new GameEntity(Entities.ROCK, "");
 const paper = new GameEntity(Entities.PAPER, "");
