@@ -1,13 +1,19 @@
 import { useState } from "react";
 import "./App.css";
 import { COMVSCOM, PLVSCOM } from "./interfaces";
+import GameBoard from "./pages/game-board";
+import Menu from "./pages/menu";
 
 function App() {
   const [gameMode, setGameMode] = useState<PLVSCOM | COMVSCOM | null>(null);
 
+  function selectGameMode(mode: PLVSCOM | COMVSCOM) {
+    setGameMode(mode);
+  }
+
   if (!gameMode) {
-    return <div>Menu</div>;
-  } else return <div>Game</div>;
+    return <Menu selectGameMode={selectGameMode} />;
+  } else return <GameBoard />;
 }
 
 export default App;

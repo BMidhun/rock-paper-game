@@ -1,13 +1,11 @@
 *,*::after,*::before{
   margin: 0px;
   padding: 0px;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html{
-  font-size: 62.5%;
   height: 100%;
-  box-sizing: border-box;
 }
 
 body {
@@ -26,6 +24,9 @@ code {
 }
 
 
+
+
 #root{
   height: 100%;
 }
+
