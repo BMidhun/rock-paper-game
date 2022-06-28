@@ -13,7 +13,7 @@ This is a simple game made with React.
 User can either play with PLAYER vs COM or the COM vs COM mode.
 
 ### Player vs Com Mode
-In the PLAYER vs COM mode, the player can choose one of the three choices - ROCK/PAPER/SCISSORS. Upon pressing one of the choices, the game randomly generates an choice for the computer. The game checks whether the choices made by Player and Computer are tie or not and displays the result.
+In the PLAYER vs COM mode, the player can choose one of the three choices - ROCK/PAPER/SCISSORS. Upon pressing one of the choices, the game randomly generates a choice for the computer. The game checks whether the choices made by Player and Computer are tie or not and displays the result.
 
 Click on "Play Again" button to play again.
 
