@@ -9,3 +9,4 @@ export const GameEntities = [rock, paper, scissors];
 
 export const MODE_PLVSCOM: PLVSCOM = "PLVSCOM";
 export const MODE_COMVSCOM: COMVSCOM = "COMVSCOM";
+export const TIE = "TIE";
