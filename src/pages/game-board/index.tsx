@@ -30,7 +30,7 @@ function GameBoard({ gameMode, goToMenu }: IProps) {
     [setComSelection]
   );
 
-  function reset() {
+  function playAgain() {
     setPlayerSelection("");
     setComSelection("");
     setResult("");
@@ -53,7 +53,7 @@ function GameBoard({ gameMode, goToMenu }: IProps) {
   }, [comSelection, playerSelection]);
 
   return (
-    <GameLayout goToMenu={goToMenu} reset={reset} result={result}>
+    <GameLayout goToMenu={goToMenu} playAgain={playAgain} result={result}>
       <PlayerBoard
         gameMode={gameMode}
         onPlayerSelect={onPlayerSelect}

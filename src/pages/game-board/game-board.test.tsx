@@ -18,17 +18,17 @@ describe("player vs com", () => {
     const rockBtn = buttons[1];
     fireEvent.click(rockBtn);
 
-    expect(screen.getByText(/Reset Game/i)).toBeInTheDocument();
+    expect(screen.getByText(/play again/i)).toBeInTheDocument();
   });
 
-  test("player vs com, after reset game check options are not disabled", () => {
+  test("player vs com, after play again check options are not disabled", () => {
     render(<GameBoard gameMode={MODE_PLVSCOM} goToMenu={goToMenu} />);
     const buttons = screen.getAllByRole("button");
     expect(buttons[1]).toHaveTextContent(/rock/i);
     const rockBtn = buttons[1];
     fireEvent.click(rockBtn);
 
-    const resetBtn = screen.getByText(/reset game/i);
+    const resetBtn = screen.getByText(/play again/i);
 
     expect(rockBtn).toBeDisabled();
 
@@ -45,9 +45,9 @@ describe("com vs com", () => {
     const result = screen.getByTestId("result");
     expect(result).toBeInTheDocument();
   });
-  test("when reset game is pressed", async () => {
+  test("when play again is pressed", async () => {
     render(<GameBoard gameMode={MODE_COMVSCOM} goToMenu={goToMenu} />);
-    const resetBtn = screen.getByText(/reset game/i);
+    const resetBtn = screen.getByText(/play again/i);
     expect(resetBtn).toBeInTheDocument();
 
     fireEvent.click(resetBtn);

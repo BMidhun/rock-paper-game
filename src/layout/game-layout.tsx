@@ -6,16 +6,16 @@ import "./style.css";
 interface IProps {
   goToMenu: () => void;
   children: ReactNode;
-  reset: () => void;
+  playAgain: () => void;
   result: string;
 }
 
-function GameLayout({ goToMenu, children, reset, result }: IProps) {
+function GameLayout({ goToMenu, children, playAgain, result }: IProps) {
   return (
     <div className="board-layout">
       <nav>
         <Button onClick={goToMenu}>Menu</Button>
-        {result.length ? <Button onClick={reset}>Reset Game</Button> : null}
+        {result.length ? <Button onClick={playAgain}>Play Again</Button> : null}
       </nav>
       <div className="game">{children}</div>
       {result.length ? (
