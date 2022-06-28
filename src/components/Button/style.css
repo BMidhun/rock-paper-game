@@ -9,6 +9,10 @@
     cursor: pointer;
 }
 
+.btn:hover{
+    background-color: #1963a3;
+}
+
 .btn:disabled{
     background-color: #b4cfe7;
     cursor: not-allowed;
