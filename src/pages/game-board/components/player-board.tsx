@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Button } from "../../../components";
 import {
   GameEntities,
   MODE_COMVSCOM,
@@ -35,12 +36,12 @@ function PlayerBoard({
           {GameEntities.map((item) => {
             return (
               <li key={item.name}>
-                <button
+                <Button
                   onClick={() => onPlayerSelect(item.name)}
                   disabled={shouldDisable}
                 >
                   {item.name}
-                </button>
+                </Button>
               </li>
             );
           })}

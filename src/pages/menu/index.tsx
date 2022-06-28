@@ -1,6 +1,8 @@
 import React from "react";
+import { Button } from "../../components";
 import { MODE_COMVSCOM, MODE_PLVSCOM } from "../../constants/game-entities";
 import { COMVSCOM, PLVSCOM } from "../../interfaces";
+import "./style.css";
 
 interface IProps {
   selectGameMode: (mode: PLVSCOM | COMVSCOM) => void;
@@ -9,22 +11,22 @@ interface IProps {
 function Menu({ selectGameMode }: IProps) {
   return (
     <div className="menu">
-      <h1>Welcome to Rock-Paper-Scissors Game</h1>
+      <h1>Rock-Paper-Scissors Game</h1>
       <h3>Choose your game mode</h3>
       <ul className="menu-mode">
         <li>
-          <button
+          <Button
             onClick={() => {
               selectGameMode(MODE_PLVSCOM);
             }}
           >
-            PL vs COM
-          </button>
+            PLAYER vs COM
+          </Button>
         </li>
         <li>
-          <button onClick={() => selectGameMode(MODE_COMVSCOM)}>
+          <Button onClick={() => selectGameMode(MODE_COMVSCOM)}>
             COM VS COM
-          </button>
+          </Button>
         </li>
       </ul>
     </div>

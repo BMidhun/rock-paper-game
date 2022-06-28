@@ -60,9 +60,6 @@ function GameBoard({ gameMode, goToMenu }: IProps) {
         selectedChoice={playerSelection}
         shouldDisable={!!comSelection}
       />
-      <div>
-        <h3>VS</h3>
-      </div>
       <ComputerBoard
         playerSelection={playerSelection}
         onComSelect={onComSelect}
