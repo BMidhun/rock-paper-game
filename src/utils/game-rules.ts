@@ -4,12 +4,13 @@ import { Entities } from "../interfaces";
 const TIE = "TIE";
 
 export const GAME_RULES = {
-  [`${Entities.ROCK}+${Entities.PAPER}`]: Entities.PAPER,
-  [`${Entities.ROCK}+${Entities.SCISSORS}`]: Entities.ROCK,
-  [`${Entities.SCISSORS}+${Entities.PAPER}`]: Entities.SCISSORS,
+  [`${Entities.ROCK}${Entities.PAPER}`]: Entities.PAPER,
+  [`${Entities.ROCK}${Entities.SCISSORS}`]: Entities.ROCK,
+  [`${Entities.SCISSORS}${Entities.PAPER}`]: Entities.SCISSORS,
 };
 
 export function computeResult(status: [string, string]) {
+  console.log(GAME_RULES);
   const entityA = status[0];
   const entityB = status[1];
 

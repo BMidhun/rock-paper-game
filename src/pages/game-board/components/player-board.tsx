@@ -1,4 +1,3 @@
-import React from "react";
 import { GameEntities, MODE_PLVSCOM } from "../../../constants/game-entities";
 import { COMVSCOM, PLVSCOM } from "../../../interfaces";
 
@@ -10,7 +9,7 @@ function PlayerBoard({ gameMode }: IProps) {
   return (
     <div className="player">
       <h3>Player</h3>
-      <div className="selected_entity">Selected Enity</div>
+      <div className="selected_entity">Selected Entity</div>
       {gameMode === MODE_PLVSCOM && (
         <ul className="player-options">
           {GameEntities.map((item) => {
