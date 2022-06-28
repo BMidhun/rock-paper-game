@@ -21,7 +21,9 @@ function ComputerBoard({
   return (
     <div className="player">
       <h3>Computer</h3>
-      <div className="selected_entity">{selectedChoice}</div>
+      <h2 className="selected_entity" data-testid="com-choice">
+        {selectedChoice}
+      </h2>
     </div>
   );
 }

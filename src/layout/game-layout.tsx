@@ -19,7 +19,7 @@ function GameLayout({ goToMenu, children, reset, result }: IProps) {
       </nav>
       <div className="game">{children}</div>
       {result.length ? (
-        <div className="result">
+        <div className="result" data-testid="result">
           {result === TIE ? "TIE GAME" : "WINNER:" + result}
         </div>
       ) : null}

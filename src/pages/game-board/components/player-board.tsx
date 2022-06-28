@@ -30,7 +30,9 @@ function PlayerBoard({
   return (
     <div className="player">
       <h3>{gameMode === MODE_PLVSCOM ? "Player" : "Computer"}</h3>
-      <div className="selected_entity">{selectedChoice}</div>
+      <h2 className="selected_entity" data-testid="player-choice">
+        {selectedChoice}
+      </h2>
       {gameMode === MODE_PLVSCOM && (
         <ul className="player-options">
           {GameEntities.map((item) => {
